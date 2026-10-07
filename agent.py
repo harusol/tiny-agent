@@ -43,6 +43,7 @@ def call_model(history):
     proc = subprocess.run(
         ["claude", "-p",
          "--tools", "",                     # 关掉 Claude Code 自带的工具
+         "--strict-mcp-config",             # 不加载连接器/MCP，避免无关信息混进上下文
          "--system-prompt", SYSTEM_PROMPT,
          "--output-format", "json"],
         input=render(history), capture_output=True, text=True, timeout=600,
