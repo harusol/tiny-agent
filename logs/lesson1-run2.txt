@@ -1,0 +1,24 @@
+[第 1 轮] bash: ls -la && python3 --version
+  执行吗？[y/N]   用户拒绝执行这个操作，换个办法。
+  [上下文] 当前历史共128 个字符
+[第 2 轮] write_file: fib.py
+  执行吗？[y/N]   已写入 fib.py（301 个字符）
+  [上下文] 当前历史共546 个字符
+[第 3 轮] write_file: test_fib.py
+  执行吗？[y/N]   已写入 test_fib.py（1124 个字符）
+  [上下文] 当前历史共1820 个字符
+[第 4 轮] bash: python3 -m unittest test_fib -v
+  执行吗？[y/N]   exit code: 0
+  test_base_cases (test_fib.TestFibonacci.test_base_cases) ... ok
+  test_large_value (test_fib.TestFibonacci.test_large_value) ... ok
+  test_negative_raises (test_fib.TestFibonacci.test_negative_raises) ... ok
+  test_non_integer_raises (test_fib.TestFibonacci.test_non_integer_raises) ... ok
+  tes
+  [上下文] 当前历史共2432 个字符
+
+完成：我写好了斐波那契函数和对应的单元测试，6 个测试全部通过。一开始想先看看目录和 Python 版本，这条命令被拒绝了，我就直接创建了文件。
+
+- `fib.py`：`fibonacci(n)` 返回第 n 个斐波那契数，其中 F(0)=0、F(1)=1。用循环计算，所以 n 很大时也不会栈溢出。传入负数会抛 `ValueError`，传入浮点数、字符串、`None` 或 `bool` 这类非整数会抛 `TypeError`。
+- `test_fib.py`：用 unittest 写了 6 个测试，覆盖 F(0)、F(1) 这两个起始值、前 11 项、F(50) 和 F(100)、递推关系 F(n)=F(n-1)+F(n-2)，以及两种非法输入的报错。
+
+运行 `python3 -m unittest test_fib -v` 的结果是 6 个测试全部 OK。

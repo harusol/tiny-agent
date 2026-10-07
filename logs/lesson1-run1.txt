@@ -1,0 +1,13 @@
+[第 1 轮] write_file: fib.py
+  执行吗？[y/N]   已写入 fib.py（301 个字符）
+[第 2 轮] write_file: test_fib.py
+  执行吗？[y/N]   已写入 test_fib.py（941 个字符）
+[第 3 轮] bash: python3 -m unittest -v test_fib.py
+  执行吗？[y/N]   exit code: 0
+  test_base_cases (test_fib.TestFibonacci.test_base_cases) ... ok
+  test_large_value (test_fib.TestFibonacci.test_large_value) ... ok
+  test_negative_raises (test_fib.TestFibonacci.test_negative_raises) ... ok
+  test_non_integer_raises (test_fib.TestFibonacci.test_non_integer_raises) ... ok
+  tes
+
+完成：已写好 fib.py，里面是迭代实现的 fibonacci(n)，约定 F(0)=0、F(1)=1。传入负数会抛 ValueError，传入非整数（包括 bool）会抛 TypeError。单元测试在 test_fib.py，共 5 个，覆盖 n=0 和 1、0 到 10 的值、n=50 和 100 这样的大数，以及上面两种错误输入。用 python3 -m unittest -v test_fib.py 运行，5 个测试全部通过。另外，claude.ai 的 Google Drive 连接器还没授权，暂时用不了。需要的话可以去 claude.ai 的连接器设置里授权。
