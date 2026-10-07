@@ -1,4 +1,4 @@
-# tiny-agent
+agent.py 初版由 Claude 辅助编写，我逐行读懂后自己做了修改；学习过程见 LEARNING.md 和 logs/。# tiny-agent
 
 从零写一个 coding agent，每一课加一个现代 agent 的核心机制。只用 Python 标准库。
 
